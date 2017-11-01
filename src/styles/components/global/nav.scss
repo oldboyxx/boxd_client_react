@@ -36,6 +36,18 @@
   &_spinner {
     @include nudge(top, 1);
     right: 45px;
+    transition: opacity 150ms ease-in;
+    opacity: 0;
+
+    &.spin-enter,
+    &.spin-exit.spin-exit-active {
+      opacity: 0;
+    }
+
+    &.spin-exit,
+    &.spin-enter.spin-enter-active {
+      opacity: 1;
+    }
   }
 
   &_user {

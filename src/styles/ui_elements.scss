@@ -208,19 +208,6 @@ textarea {
     left: 0;
     background: rgba(#fff, 0.15);
   }
-
-  transition: opacity 150ms ease-in;
-  opacity: 0;
-
-  &.spin-enter,
-  &.spin-exit.spin-exit-active {
-    opacity: 0;
-  }
-
-  &.spin-exit,
-  &.spin-enter.spin-enter-active {
-    opacity: 1;
-  }
 }
 
 @-webkit-keyframes spinner {

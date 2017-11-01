@@ -51,7 +51,7 @@ class LoginPage extends Component {
 
           <div className="login_links">
             <a
-              href="https://github.com/oldboyxx/boxd_react_client"
+              href="https://github.com/oldboyxx/boxd_client_react"
               target="_blank"
               className="login_link"
             >
