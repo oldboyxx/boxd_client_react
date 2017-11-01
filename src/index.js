@@ -11,7 +11,7 @@ import { Provider } from 'react-redux'
 import store from 'state/store'
 
 import Auth from 'components/global/auth'
-import LoginPage from 'components/pages/login/LoginPage'
+import LoginPage from 'components/pages/login/loginPage'
 import App from 'components/global/app'
 import ProjectsPage from 'components/pages/projects/projectsPage'
 import ProjectPage from 'components/pages/project/projectPage'
