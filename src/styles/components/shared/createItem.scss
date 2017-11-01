@@ -1,0 +1,23 @@
+.createItem {
+  &_form {
+    width: 100%;
+    padding: 15px 12px;
+    text-align: left;
+    border-radius: 3px;
+    background: $muted;
+  }
+
+  &_textarea, &_input {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  &_submit {
+    @include action-color($success, #fff);
+  }
+
+  &_close {
+    @include nudge(bottom, 1);
+    margin-left: 10px;
+  }
+}

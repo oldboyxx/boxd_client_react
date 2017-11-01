@@ -1,0 +1,59 @@
+.project {
+
+  &_title {
+    padding: 20px 0 10px;
+  }
+
+  &_desc {
+    p {
+      display: inline-block;
+      width: 650px;
+      font-size: 18px;
+      color: $light-text;
+    }
+  }
+
+  &_openForm {
+    margin-top: 20px;
+    @include action-color($muted-2);
+    .i-edit {
+      right: 2px;
+      font-size: 16px;
+    }
+  }
+
+  &_form {
+    display: inline-block;
+    width: 350px;
+    text-align: left;
+  }
+
+  &_input {
+    margin: 20px 0;
+  }
+
+  &_textarea {
+    margin-bottom: 16px;
+  }
+
+  &_form-submit {
+    @include action-color($success);
+  }
+
+  &_archieve {
+    float: right;
+    @include nudge(top, 0);
+    left: 5px;
+  }
+
+  &_tt {
+    top: 4px;
+    right: 100%;
+    width: 160px;
+  }
+
+  &_close-form {
+    @include nudge(bottom, 1);
+    margin-left: 10px;
+  }
+}

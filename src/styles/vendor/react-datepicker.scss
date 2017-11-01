@@ -1,0 +1,94 @@
+.react-datepicker__tether-element-attached-top .react-datepicker__triangle, .react-datepicker__tether-element-attached-top .react-datepicker__triangle::before {
+  border-bottom-color: lighten($background, 4%);
+}
+.react-datepicker__tether-element-attached-top .react-datepicker__triangle::before {
+  border-bottom-color: $muted;
+}
+
+.react-datepicker__tether-element-attached-bottom .react-datepicker__triangle::before, .react-datepicker__year-read-view--down-arrow::before {
+  border-top-color: $muted;
+}
+
+.react-datepicker {
+  @include semibold-font;
+  font-size: 15px;
+  background-color: #fff;
+  border: 1px solid $muted;
+}
+
+.react-datepicker__header {
+  background-color: lighten($background, 4%);
+  border-bottom: 1px solid $muted;
+}
+
+.react-datepicker__navigation--previous {
+  border-right-color: $muted-2;
+}
+.react-datepicker__navigation--previous:hover {
+  border-right-color: darken($muted-2, 10%);
+}
+.react-datepicker__navigation--next {
+  border-left-color: $muted-2;
+}
+.react-datepicker__navigation--next:hover {
+  border-left-color: darken($muted-2, 10%);
+}
+.react-datepicker__navigation--years-previous {
+  border-top-color: $muted-2;
+}
+.react-datepicker__navigation--years-previous:hover {
+  border-top-color: darken($muted-2, 10%);
+}
+.react-datepicker__navigation--years-upcoming {
+  border-bottom-color: $muted-2;
+}
+.react-datepicker__navigation--years-upcoming:hover {
+  border-bottom-color: darken($muted-2, 10%);
+}
+
+.react-datepicker__day:hover {
+  background-color: $main;
+  color: #fff;
+}
+.react-datepicker__day--today {
+}
+.react-datepicker__day--selected, .react-datepicker__day--in-range {
+  border-radius: 4px;
+  background-color: $main;
+}
+.react-datepicker__day--selected:hover, .react-datepicker__day--in-range:hover {
+  background-color: $main;
+}
+.react-datepicker__day--disabled {
+  color: $muted-2;
+}
+.react-datepicker__year-read-view:hover .react-datepicker__year-read-view--down-arrow {
+  border-top-color: darken($muted-2, 10%);
+}
+.react-datepicker__year-read-view--down-arrow {
+  border-top-color: $muted-2;
+}
+
+.react-datepicker__year-dropdown {
+  background-color: lighten($background, 4%);
+  border: 1px solid $muted;
+}
+
+.react-datepicker__year-option:hover {
+  background-color: $muted-2;
+}
+.react-datepicker__year-option:hover .react-datepicker__navigation--years-upcoming {
+  border-bottom-color: darken($muted-2, 10%);
+}
+.react-datepicker__year-option:hover .react-datepicker__navigation--years-previous {
+  border-top-color: darken($muted-2, 10%);
+}
+
+.react-datepicker__close-icon::after {
+  background-color: $muted-2;
+}
+
+.react-datepicker__today-button {
+  background: lighten($background, 4%);
+  border-top: 1px solid $muted;
+}

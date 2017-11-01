@@ -1,0 +1,81 @@
+.itemUser {
+  display: inline-block;
+  .avatar {
+    @include clickable;
+  }
+}
+
+.userCard {
+  z-index: 9999;
+  position: fixed;
+  width: 280px;
+  border-radius: 3px;
+  border: 1px solid $muted;
+  background: #fff;
+  box-shadow: 0 0 7px 0 rgba(#000, 0.15);
+
+  &_user {
+    min-height: 70px;
+    padding: 10px 30px 10px 70px;
+    .avatar {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  &_title, &_bio {
+    display: inline-block;
+  }
+
+  &_bio {
+    font-size: 15px;
+    color: $light-text;
+  }
+
+  &_actions {
+    padding-bottom: 10px;
+  }
+
+  &_action {
+    width: 100%;
+    padding: 3px 10px 3px;
+    @include clickable;
+    &:hover {
+      color: #fff;
+      background: $main;
+    }
+    &.is-active {
+      color: lighten($light-text, 10%);
+      &:hover {
+        color: lighten($light-text, 10%);
+        background: transparent;
+        cursor: default;
+      }
+    }
+  }
+
+  &_actionTitle {
+    @include bold-font;
+  }
+
+  &_permissions {
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  &_go-back {
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    font-size: 21px;
+  }
+
+  &_permissions-title {
+    display: inline-block;
+    @include semibold-font;
+  }
+}

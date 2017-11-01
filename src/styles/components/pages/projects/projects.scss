@@ -1,0 +1,63 @@
+.projects {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 8px;
+
+  &_controls {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    .createItem {
+      display: inline-block;
+      padding: 40px 0;
+      &_link {
+        width: 300px;
+        height: 50px;
+        line-height: 47px;
+        text-align: center;
+        border-radius: 3px;
+        @include clickable;
+        @include normal-font;
+        @include action-color($muted, $light-text, (lighten: false, active: false))
+      }
+    }
+  }
+  .see-archieved-projects {
+    position: absolute;
+    top: 36px;
+    right: 10px;
+    color: $light-text;
+    text-decoration: underline;
+    @include clickable;
+  }
+
+  &_item {
+    padding-bottom: 40px;
+  }
+
+  &_head {
+    padding: 0 8px;
+    padding-bottom: 16px;
+    & > a {
+      display: inline-block;
+      transition: 0.3s;
+      &:hover {
+        transform: translateX(10px);
+      }
+    }
+  }
+
+  &_title {
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  &_no-results {
+    padding-top: 100px;
+    text-align: center;
+    font-size: 50px;
+    color: $muted;
+    @include bold-font;
+  }
+}

@@ -1,0 +1,10 @@
+.taskOverlay {
+  @extend .stretch;
+  z-index: 100;
+  position: fixed !important;
+  padding: 100px 16px 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: rgba(#000, 0.5);
+  @include hardware-accelerate;
+}

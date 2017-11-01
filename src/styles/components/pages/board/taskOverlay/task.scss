@@ -1,0 +1,94 @@
+.task {
+  position: relative;
+  margin: 0 auto;
+  width: 700px;
+  border-radius: 3px;
+  background: $background;
+  box-shadow: 0 0 10px 0 rgba(#000, 0.25);
+
+  .archieved-bar {
+    border-radius: 3px 3px 0 0;
+  }
+
+  &_inner {
+    padding: 16px 20px;
+  }
+
+  &_close {
+    position: absolute;
+    top: 5px;
+    right: 4px;
+  }
+
+  &_title, &_textarea-title {
+    padding: 0;
+    padding-bottom: 3px;
+    font-size: 20px;
+    line-height: 1.25;
+    @include bold-font;
+  }
+
+  &_title {
+    margin-bottom: 4px;
+    width: 640px;
+    @include clickable;
+  }
+
+  &_textarea-title {
+    @include nudge(right, 8);
+    padding-left: 8px;
+    width: 648px;
+  }
+
+  &_desc {
+    padding-top: 30px;
+
+    .markdown-body {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 3px;
+      border-bottom: 1px solid $muted;
+      box-shadow: 0 0 1px 0 rgba(#000, 0.1);
+      background: #fff;
+    }
+  }
+
+  &_desc-link {
+    display: inline-block;
+    font-size: 15px;
+    color: $light-text;
+    text-decoration: underline;
+    @include clickable;
+    &:hover {
+      text-decoration: none;
+    }
+    .i-text {
+      @include nudge(top, 1);
+      margin-right: 10px;
+    }
+  }
+
+  &_desc-form {
+    padding-top: 30px;
+    @include nudge(top, 4);
+  }
+
+  &_desc-textarea {
+    margin-bottom: 6px;
+    border-bottom: 1px solid $muted;
+    box-shadow: 0 0 1px 0 rgba(#000, 0.1);
+  }
+
+  &_desc-submit {
+    @include action-color($success);
+  }
+
+  &_desc-close {
+    margin-left: 10px;
+  }
+
+  &_desc-formatting-link {
+    float: right;
+    @include action-color($muted-2, #fff);
+  }
+}

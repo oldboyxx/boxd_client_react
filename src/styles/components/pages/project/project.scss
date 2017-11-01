@@ -1,0 +1,71 @@
+.project {
+  width: 100%;
+  padding-bottom: 32px;
+  text-align: center;
+  background: $background;
+
+  &_inner {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1100px;
+
+    & > .avatar {
+      margin-top: 40px;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &_add-members-link {
+    margin-top: 10px;
+    @include action-color($muted-2);
+    .i-user-add {
+      top: 0;
+      margin-right: 10px;
+      font-size: 16px;
+    }
+  }
+
+  &_add-members-form {
+    padding-top: 20px;
+    display: inline-block;
+    width: 350px;
+    text-align: left;
+  }
+
+  &_add-members-explanation {
+    padding-bottom: 10px;
+  }
+
+  &_add-members-input {
+    margin-bottom: 20px;
+    .i-user-add {
+      top: 5px;
+    }
+  }
+
+  &_add-members-submit {
+    @include action-color($success);
+  }
+
+  &_add-members-close {
+    margin-left: 10px;
+  }
+
+  &_users {
+    padding: 30px 20px 0;
+    .itemUser {
+      margin-right: 5px;
+      margin-bottom: 1px;
+    }
+  }
+
+  .see-archieved-boards {
+    position: absolute;
+    bottom: -18px;
+    right: 10px;
+    color: $light-text;
+    text-decoration: underline;
+    @include clickable;
+  }
+}

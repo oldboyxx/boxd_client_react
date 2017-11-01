@@ -1,0 +1,111 @@
+.taskItem {
+  position: relative;
+  margin-bottom: 10px;
+  background: #fff;
+  border-radius: 3px;
+  border-bottom: 1px solid $muted;
+  box-shadow: 0 0 1px 0 rgba(#000, 0.1);
+  cursor: pointer;
+  @extend .cf;
+
+  &:hover .task_archieve {
+    display: inline-block;
+  }
+
+  &.drop-hover {
+    background: #f7f7f7;
+  }
+
+  &.is-dragging {
+    transform: rotate(4deg);
+    box-shadow: -3px 3px 5px 0 rgba(#000, 0.12);
+  }
+
+  &.is-placeholder {
+    background: darken($background, 8%);
+  }
+
+  &_link {
+    z-index: 1;
+    @extend .stretch;
+  }
+
+  .task_archieve {
+    z-index: 2;
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    font-size: 18px;
+    color: $light-text;
+    &.hide {
+      display: none !important;
+    }
+    &:hover {
+      color: $text;
+    }
+    .task_tt {
+      top: 1px;
+      right: 100%;
+      width: 130px;
+    }
+  }
+
+  &_labels {
+    padding: 8px 0 0 8px;
+    line-height: 0;
+  }
+
+  &_label {
+    display: inline-block;
+    margin-right: 5px;
+    width: 42px;
+    height: 8px;
+    border-radius: 3px;
+  }
+
+  &_title {
+    padding: 5px 8px 7px;
+    user-select: none;
+    line-height: 1.35;
+  }
+
+  &_badges {
+    float: left;
+    display: inline-block;
+    padding: 8px 0 8px 8px;
+    font-size: 14px;
+    color: lighten($light-text, 10%);
+  }
+
+  &_badge-desc,
+  &_badge-comments,
+  &_badge-date {
+    display: inline-block;
+    margin-right: 12px;
+  }
+
+  &_badge-desc {
+    margin-right: 14px;
+    @include nudge(top, 1);
+  }
+
+  &_badge-date {
+    &.is-past-soon {
+      color: $warning;
+    }
+    &.is-past {
+      color: $danger;
+    }
+  }
+
+  &_users {
+    z-index: 2;
+    position: relative;
+    float: right;
+    padding: 3px 1px 2px 0;
+    .itemUser {
+      margin-right: 5px;
+    }
+  }
+}

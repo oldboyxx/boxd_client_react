@@ -1,0 +1,160 @@
+.task {
+
+  &_actions {
+    padding-right: 40px;
+    position: relative;
+  }
+
+  &_section-title {
+    padding-bottom: 8px;
+    color: $light-text;
+  }
+
+  &_members,
+  &_date,
+  &_labels {
+    display: inline-block;
+    margin-right: 30px;
+    padding-top: 15px;
+    vertical-align: top;
+  }
+
+  &_members .itemUser {
+    margin-right: 5px;
+    vertical-align: top;
+  }
+
+  &_date {
+    position: relative;
+    .i-calendar {
+      z-index: 2;
+      position: absolute;
+      bottom: 3px;
+      left: 12px;
+      color: $muted-2;
+    }
+    input {
+      @extend .text-input;
+      width: 132px;
+      height: 30px;
+      padding-left: 35px;
+      cursor: pointer;
+      @include semibold-font;
+    }
+    &.is-past-soon {
+      .i-calendar {
+        color: $warning;
+      }
+      input {
+        width: 165px;
+        color: $warning;
+      }
+      .react-datepicker__close-icon::after {
+        background-color: $warning;
+      }
+    }
+    &.is-past {
+      .i-calendar {
+        color: $danger;
+      }
+      input {
+        width: 185px;
+        color: $danger;
+      }
+      .react-datepicker__close-icon::after {
+        background-color: $danger;
+      }
+    }
+  }
+
+  &_labels {
+    margin-right: 0;
+    max-width: 250px;
+    .task_section-title {
+      padding-bottom: 2px;
+    }
+  }
+
+  &_label {
+    vertical-align: top;
+    position: relative;
+    display: inline-block;
+    margin-top: 6px;
+    margin-right: 6px;
+    min-height: 30px;
+    min-width: 40px;
+    padding: 4px 10px 4px 10px;
+    border-radius: 3px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(#000, 0.6);
+    .i-close {
+      display: none;
+      position: absolute;
+      top: 0px;
+      right: 0;
+      font-size: 24px;
+      color: #fff;
+    }
+    &:hover .i-close {
+      display: inline-block;
+    }
+  }
+
+  &_add-label {
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 6px;
+    height: 30px;
+    width: 30px;
+    border-radius: 3px;
+    @include clickable;
+    @include action-color($muted, $light-text, (lighten: false, active: false));
+    .i-plus {
+      @include nudge(top, 6);
+      left: 6px;
+      font-size: 18px;
+    }
+  }
+
+  &_archieve {
+    position: absolute;
+    top: 44px;
+    right: -7px;
+  }
+
+  &_tt {
+    top: 5px;
+    right: 100%;
+    width: 130px;
+  }
+}
+
+.addLabelPopup {
+  z-index: 9999;
+  position: fixed;
+  width: 280px;
+  height: 262px;
+  padding: 15px 10px 0 10px;
+  border-radius: 3px;
+  border: 1px solid $muted;
+  background: #fff;
+  box-shadow: 0 0 7px 0 rgba(#000, 0.15);
+  @include semibold-font;
+  @include clickable;
+  @extend .scrollableY;
+
+  .task_label {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+
+  &_no-results {
+    padding-top: 45px;
+    text-align: center;
+    color: $muted;
+    font-size: 36px;
+    line-height: 36px;
+    @include bold-font;
+  }
+}
+

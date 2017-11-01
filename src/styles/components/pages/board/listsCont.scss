@@ -1,0 +1,55 @@
+.listsCont {
+  position: relative;
+  flex-grow: 1;
+
+  &_inner {
+    @extend .stretch;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 10px 10px;
+    margin-bottom: 5px;
+    -webkit-overflow-scrolling: touch;
+    @include hardware-accelerate;
+
+    &::-webkit-scrollbar {
+      height: 12px;
+    }
+
+    &::-webkit-scrollbar-button {
+      display: block;
+      height: 5px;
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 99px;
+      background: rgba(#fff, 0.25);
+    }
+  }
+}
+
+.listsCont_createItem {
+  display: inline-block;
+  width: 270px;
+  white-space: normal;
+  vertical-align: top;
+
+  .createItem_link {
+    padding: 0 10px;
+    height: 40px;
+    line-height: 38px;
+    border-radius: 3px;
+    @include clickable;
+    @include normal-font;
+    color: rgba(#fff, 0.65);
+    background: rgba(#000, 0.2);
+    &:hover {
+      background: rgba(#000, 0.25);
+    }
+  }
+}

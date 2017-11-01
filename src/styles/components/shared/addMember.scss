@@ -1,0 +1,79 @@
+.addMember {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 230px;
+  border-radius: 3px;
+  border: 1px solid $muted;
+  background: #fff;
+  box-shadow: 0 0 7px 0 rgba(#000, 0.15);
+  @include semibold-font;
+
+  &_popover-link {
+    vertical-align: top;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 3px;
+    @include clickable;
+    @include action-color($muted, $light-text, (lighten: false, active: false));
+    .i-user-add {
+      @include nudge(top, 5);
+      left: 6px;
+      font-size: 20px;
+    }
+  }
+
+  &_title {
+    position: relative;
+    flex: 0 0 auto;
+    padding: 10px 10px 10px 40px;
+    font-size: 15px;
+    border-radius: 3px 3px 0 0;
+    color: #fff;
+    background: $muted-2;
+    .i-user-add {
+      position: absolute;
+      top: 12px;
+      left: 11px;
+      font-size: 20px;
+    }
+  }
+
+  &_inner {
+    flex: 1 1 auto;
+    @extend .scrollableY;
+  }
+
+  &_user {
+    padding: 5px 10px;
+    cursor: pointer;
+    &:hover {
+      background: $background;
+    }
+    &:first-of-type {
+      padding-top: 10px;
+    }
+    &:last-of-type {
+      padding-bottom: 10px;
+    }
+  }
+
+  .avatar {
+    vertical-align: middle;
+  }
+
+  &_user-name {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  &_no-results {
+    padding-top: 45px;
+    text-align: center;
+    color: $muted;
+    font-size: 36px;
+    line-height: 36px;
+    @include bold-font;
+  }
+}

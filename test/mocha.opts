@@ -1,0 +1,4 @@
+--compilers js:babel-register
+--require ./test/globals.js
+--recursive
+--timeout 9999999

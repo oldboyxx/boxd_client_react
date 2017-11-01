@@ -1,0 +1,24 @@
+.body_boardPage {
+  @media screen and (min-width: 768px) {
+    overflow: hidden;
+  }
+  @media screen and (max-width: 767px) {
+    overflow-y: hidden;
+  }
+  .nav {
+    z-index: 15;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(#000, 0.2);
+  }
+}
+
+.boardPage {
+  display: flex;
+  flex-direction: column;
+  padding-top: $nav-height;
+  width: 100%;
+  height: 100vh;
+  background: $main;
+}

@@ -1,0 +1,181 @@
+// Color variables
+
+$blue: #2196F3;
+$light-blue: #03A9F4;
+$teal: #009688;
+$purple: #9C27B0;
+$red: #DD2C00;
+$red-2: #C62828;
+$orange: #FF8F00;
+$light-grey: #E0E0E0;
+$blue-grey: #CFD8DC;
+$blue-grey-2: #90A4AE;
+$google: #dd4b39;
+
+// Functional variables
+
+$main: darken($purple, 3%);
+$muted: $blue-grey;
+$muted-2: $blue-grey-2;
+$success: $teal;
+$warning: $orange;
+$danger: $red;
+$avatar: $blue;
+$text: #333;
+$light-text: #757575;
+$white-text: #fff;
+$background: lighten($muted, 8%);
+$light-background: #FAFAFA;
+
+$nav-height: 50px;
+
+// Helpers classes
+
+.hide {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.link {
+  color: $light-blue;
+  cursor: pointer;
+  &:hover {
+    color: lighten($light-blue, 15%);
+  }
+}
+
+.cf {
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.stretch {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.scrollableY {
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow-y: overlay;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 99px;
+    background: $background;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 99px;
+    background: darken($background, 12%);
+  }
+}
+
+@mixin clickable {
+  cursor: pointer;
+  user-select: none;
+}
+
+@mixin nudge($where, $amount) {
+  position: relative;
+   #{$where}: #{$amount}px;
+}
+
+@mixin action-color($background, $color: #fff, $cf: ()) {
+  $cf: map-merge(( lighten: true, amount: 7%, active: true), $cf);
+  $lighten: (map-get($cf, lighten) == true);
+  $amount: map-get($cf, amount);
+  $hasActive: (map-get($cf, active) == true);
+
+  color: $color;
+  background: $background;
+  &:active { background: $background }
+
+  @if $lighten {
+    &:hover { background: lighten($background, $amount) }
+    &:active { @if $hasActive { background: darken($background, $amount) } }
+  } @else {
+    &:hover { background: darken($background, $amount) }
+    &:active { @if $hasActive { background: lighten($background, $amount) } }
+  }
+}
+
+@mixin archieved-background() {
+  background: repeating-linear-gradient(
+    45deg,
+    #E65100,
+    #E65100 18px,
+    #FF8F00 18px,
+    #FF8F00 36px
+  );
+}
+
+@mixin placeholder-color($color) {
+  ::-webkit-input-placeholder {
+    color: $color;
+  }
+  :-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+  ::-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+  :-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+@mixin hardware-accelerate {
+  transform: translateZ(0);
+}

@@ -1,0 +1,41 @@
+@font-face {
+	font-family: 'SourceSansPro-Semibold';
+	src: url('../assets/fonts/subset-SourceSansPro-Semibold.eot');
+	src: url('../assets/fonts/subset-SourceSansPro-Semibold.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/subset-SourceSansPro-Semibold.woff') format('woff'),
+		url('../assets/fonts/subset-SourceSansPro-Semibold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SourceSansPro-Bold';
+	src: url('../assets/fonts/subset-SourceSansPro-Bold.eot');
+	src: url('../assets/fonts/subset-SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/subset-SourceSansPro-Bold.woff') format('woff'),
+		url('../assets/fonts/subset-SourceSansPro-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SourceSansPro-Regular';
+	src: url('../assets/fonts/subset-SourceSansPro-Regular.eot');
+	src: url('../assets/fonts/subset-SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/subset-SourceSansPro-Regular.woff') format('woff'),
+		url('../assets/fonts/subset-SourceSansPro-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin semibold-font {
+	font-family: 'SourceSansPro-Semibold', 'arial';
+}
+
+@mixin bold-font {
+	font-family: 'SourceSansPro-Bold', 'arial';
+}
+
+@mixin normal-font {
+	font-family: 'SourceSansPro-Regular', 'arial';
+}

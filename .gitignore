@@ -1,0 +1,6 @@
+/node_modules
+/npm-debug.log
+/scratchpad.md
+/dist
+/dev
+.DS_Store

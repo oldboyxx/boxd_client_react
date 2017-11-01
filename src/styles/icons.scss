@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "boxd";
+  src:url("../assets/icons/boxd.eot");
+  src:url("../assets/icons/boxd.eot?#iefix") format("embedded-opentype"),
+    url("../assets/icons/boxd.woff") format("woff"),
+    url("../assets/icons/boxd.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="i-"],
+[class*=" i-"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+[class^="i-"]:before,
+[class*=" i-"]:before {
+  font-family: "boxd" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-logo:before {
+  content: "\61";
+}
+.i-search:before {
+  content: "\62";
+}
+.i-info:before {
+  content: "\63";
+}
+.i-edit:before {
+  content: "\64";
+}
+.i-archieve:before {
+  content: "\65";
+}
+.i-elipsis:before {
+  content: "\66";
+}
+.i-close:before {
+  content: "\67";
+}
+.i-filters:before {
+  content: "\68";
+}
+.i-user:before {
+  content: "\69";
+}
+.i-user-add:before {
+  content: "\6a";
+}
+.i-label:before {
+  content: "\6b";
+}
+.i-settings:before {
+  content: "\6c";
+}
+.i-mail:before {
+  content: "\6d";
+}
+.i-lock:before {
+  content: "\6e";
+}
+.i-arrow-left:before {
+  content: "\6f";
+}
+.i-plus:before {
+  content: "\70";
+}
+.i-comment:before {
+  content: "\71";
+}
+.i-text:before {
+  content: "\72";
+}
+.i-calendar:before {
+  content: "\73";
+}
+.i-move:before {
+  content: "\74";
+}
+.i-check:before {
+  content: "\75";
+}
+.i-list:before {
+  content: "\76";
+}
+.i-clock:before {
+  content: "\77";
+}
+.i-eye:before {
+  content: "\78";
+}
+.i-facebook:before {
+  content: "\79";
+}
+.i-google:before {
+  content: "\7a";
+}
+.i-twitter:before {
+  content: "\42";
+}
+.i-logout:before {
+  content: "\41";
+}

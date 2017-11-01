@@ -1,0 +1,93 @@
+.list {
+  margin-right: 10px;
+  display: inline-block;
+  height: 100%;
+  width: 270px;
+  white-space: normal;
+  vertical-align: top;
+
+  &.is-dragging .list_inner {
+    transform: rotate(4deg);
+    box-shadow: -3px 3px 5px 0 rgba(#000, 0.12);
+  }
+
+  &.is-placeholder {
+    background: rgba(#000, 0.15);
+  }
+
+  &_inner {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    position: relative;
+    border-radius: 3px;
+    background: $background;
+  }
+
+  &_header {
+    flex: 0 0 auto;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 40px 0 6px;
+    font-size: 16px;
+    @include bold-font;
+  }
+
+  &_title {
+    padding-left: 5px;
+    @include nudge(top, 1);
+    @include clickable;
+  }
+
+  &_input-title {
+    height: 25px;
+    padding-left: 5px;
+    background: $background;
+    cursor: pointer;
+    &:focus {
+      background: #fff;
+    }
+  }
+
+  &_archieve {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    font-size: 18px;
+    color: $light-text;
+    &:hover {
+      color: $text;
+    }
+  }
+
+  &_tt {
+    top: 7px;
+    right: 100%;
+    width: 130px;
+  }
+
+  &_create-task-cont {
+    flex: 0 0 auto;
+
+    .createItem_link {
+      padding: 10px;
+      color: $light-text;
+      @include clickable;
+      &:hover {
+        text-decoration: underline;
+        color: darken($light-text, 8%);
+        background: $muted;
+      }
+    }
+
+    .createItem_form {
+      padding: 10px 10px 15px;
+      background: $background;
+    }
+
+    textarea {
+      border-bottom: 1px solid $muted;
+      box-shadow: 0 0 1px 0 rgba(#000, 0.1);
+    }
+  }
+}

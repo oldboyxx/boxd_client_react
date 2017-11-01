@@ -1,0 +1,121 @@
+// Base styles
+
+html {
+  min-height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  min-width: 767px;
+  background: $light-background;
+}
+
+*, *:after, *:before, input[type=search] {
+  box-sizing: border-box;
+}
+
+button, input, textarea {
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+ul, li, h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+}
+
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body, select {
+  font-smoothing: subpixel-antialiased !important;
+}
+
+::selection {
+  background: rgba($muted, 0.75);
+}
+
+html {
+  touch-action: manipulation;
+}
+
+textarea {
+  resize: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/**
+* Typography
+*/
+
+body {
+  color: $text;
+  font-size: 16px;
+  font-weight: normal;
+  @include normal-font;
+}
+
+strong {
+  @include bold-font;
+}
+
+ul,ol,dd {
+  margin-bottom: 14px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  line-height: 1;
+  font-weight: normal;
+  @include bold-font;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+p {
+  line-height: 1.5;
+  hyphens: auto;
+  font-weight: normal;
+  @include normal-font;
+}
+
+@include placeholder-color(darken($light-text, 15%));

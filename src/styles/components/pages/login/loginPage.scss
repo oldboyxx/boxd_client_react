@@ -1,0 +1,48 @@
+.loginPage {
+  background: $main;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  max-width: 755px;
+  margin: 0 auto;
+  padding: 30px 20px 120px;
+  text-align: center;
+  color: #fff;
+
+  &_title {
+    padding-bottom: 20px;
+    font-size: 80px;
+  }
+
+  &_desc {
+    padding-bottom: 35px;
+    font-size: 24px;
+  }
+
+  &_test {
+    margin-bottom: 20px;
+    @include button-big;
+    @include action-color($blue);
+  }
+
+  &_google {
+    @include action-color($google);
+  }
+
+  &_links {
+    padding-top: 40px;
+  }
+
+  &_link {
+    display: inline-block;
+    padding: 3px 10px;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

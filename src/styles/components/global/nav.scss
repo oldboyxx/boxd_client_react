@@ -1,0 +1,56 @@
+.nav {
+  position: relative;
+  width: 100%;
+  height: $nav-height;
+  padding: 9px 8px 7px;
+  background: darken($main, 5%);
+
+  .button {
+    background: rgba(#fff, 0.2);
+    &:hover {
+      background: rgba(#fff, 0.25);
+    }
+  }
+
+  &_block {
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  &_logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -42px;
+    font-size: 25px;
+    @include bold-font;
+    color: rgba(#fff, 0.5) !important;
+    &:hover {
+      color: rgba(#fff, 0.6) !important;
+    }
+    i {
+      margin-right: 5px;
+      @include nudge(top, 1);
+    }
+  }
+
+  &_spinner {
+    @include nudge(top, 1);
+    right: 45px;
+  }
+
+  &_user {
+    padding-left: 0;
+    .avatar {
+      @include nudge(bottom, 1);
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 12px;
+      height: 32px;
+      width: 32px;
+      border-radius: 3px 0 0 3px;
+      &_img {
+        border-radius: 3px 0 0 3px;
+      }
+    }
+  }
+}

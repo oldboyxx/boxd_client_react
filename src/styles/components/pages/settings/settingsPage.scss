@@ -1,0 +1,45 @@
+.settings {
+  margin: 60px auto 0;
+  padding: 20px;
+  max-width: 400px;
+  border-radius: 3px;
+  background: $background;
+
+  &_title {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  label {
+    display: inline-block;
+    padding-bottom: 4px;
+    @include semibold-font;
+  }
+
+  .text-input {
+    margin-bottom: 20px;
+  }
+
+  &_submit {
+    float: left;
+    @include action-color($success);
+  }
+
+  &_logout {
+    float: right;
+    font-size: 18px;
+    text-decoration: underline;
+    @include nudge(top, 2);
+    @include semibold-font;
+    @include clickable;
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+    i {
+      @include nudge(top, 2);
+      right: 2px;
+      font-size: 20px;
+    }
+  }
+}

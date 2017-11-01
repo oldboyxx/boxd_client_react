@@ -1,0 +1,40 @@
+.boards {
+  width: 100%;
+  @extend .cf;
+
+  &_item-cont, .createItem {
+    float: left;
+    padding: 0 8px 16px;
+    width: 25%;
+    @media screen and (max-width: 1000px) {
+      width: 33.333%;
+    }
+  }
+
+  &_item, .createItem_link {
+    display: block;
+    width: 100%;
+    height: 100px;
+    padding: 10px 12px;
+    border-radius: 3px;
+  }
+
+  &_item {
+    @include action-color($main, #fff, (lighten: false, active: false))
+  }
+
+  .createItem_link {
+    text-align: center;
+    @include clickable;
+    @include action-color($muted, $light-text, (lighten: false, active: false))
+  }
+
+  &_title {
+    color: #fff;
+    @include semibold-font;
+  }
+
+  .createItem_title {
+    padding-top: 28px;
+  }
+}

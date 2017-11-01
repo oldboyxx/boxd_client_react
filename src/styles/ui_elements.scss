@@ -1,0 +1,233 @@
+// Mixins
+
+@mixin button($background, $text: #fff) {
+  display: inline-block;
+  height: 32px;
+  line-height: 30px;
+  padding: 0 15px;
+  color: $text;
+  background: $background;
+  border-radius: 3px;
+  font-size: 16px;
+  @include clickable;
+  @include semibold-font;
+  &:visited {
+    color: $text;
+  }
+  &:hover {
+    color: $text;
+    background: lighten($background, 7%);
+  }
+  &:active {
+    color: $text;
+    background: darken($background, 7%);
+  }
+  i {
+    position: relative;
+    top: 1px;
+    margin-right: 5px;
+    font-size: 18px;
+  }
+}
+
+@mixin button-big() {
+  height: 44px;
+  line-height: 42px;
+  font-size: 18px;
+  padding: 0 20px;
+  i {
+    top: 2px;
+    margin-right: 7px;
+    font-size: 24px;
+  }
+}
+
+@mixin text-input() {
+  width: 100%;
+  height: 32px;
+  padding: 0 10px;
+  border: none;
+  font-size: 16px;
+  border-radius: 3px;
+  background: #fff;
+  &:focus {
+    outline: none;
+    background: #fff;
+  }
+}
+
+@mixin icon-input($icon-color: $light-text) {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  @extend .cf;
+  .text-input {
+    padding-left: 40px;
+  }
+  i {
+    color: $icon-color;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    padding: 0 12px;
+    font-size: 18px;
+  }
+}
+
+@mixin textarea() {
+  width: 100%;
+  height: 110px;
+  padding: 9px 10px 10px;
+  border: none;
+  font-size: 16px;
+  border-radius: 3px;
+  background: #fff;
+  &:focus {
+    outline: none;
+    background: #fff;
+  }
+}
+
+@mixin search($text: #fff) {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  input {
+    padding-left: 32px;
+    padding-right: 15px;
+  }
+  .i-search {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    color: $text;
+  }
+}
+
+// Styles
+
+.button {
+  @include button($main, #fff);
+}
+
+.big {
+  @include button-big;
+}
+
+.text-input {
+  @include text-input;
+}
+
+.icon-input {
+  @include icon-input();
+}
+
+textarea {
+  @include textarea;
+}
+
+.search {
+  @include search;
+}
+
+.clickable-icon {
+  padding: 0 5px;
+  font-size: 25px;
+  @include clickable;
+  &:hover {
+    transform: scale(1.2);
+  }
+  &:before {
+    @include nudge(top, 2);
+  }
+}
+
+.i-archieve {
+  transform: none !important;
+  .tt {
+    height: 20px;
+    line-height: 17px;
+    &.danger { background: $danger; }
+    &.success { background: $success; }
+  }
+}
+
+.archieved-bar {
+  width: 100%;
+  height: 40px;
+  line-height: 38px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  text-shadow: 1px 2px rgba(#000, 0.5);
+  @include semibold-font;
+  @include archieved-background;
+}
+
+.tt-source:hover + .tt {
+  display: inline-block;
+}
+
+.tt {
+  display: none;
+  position: absolute;
+  padding: 1px 2px 2px;
+  width: 150px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 3px;
+  color: #fff;
+  background: $muted-2;
+  font-style: normal;
+  @include normal-font;
+}
+
+.spinner {
+  &:after {
+    z-index: 2;
+    content: "";
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    border-right: 4px solid rgba(#fff, 0.15);
+    border-top: 4px solid rgba(#fff, 0.6);
+    border-left: 4px solid rgba(#fff, 0.6);
+    border-bottom: 4px solid rgba(#fff, 0.6);
+    border-radius: 100%;
+    animation: spinner 0.75s infinite linear;
+    transform-origin: center;
+  }
+
+  &:before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(#fff, 0.15);
+  }
+
+  transition: opacity 150ms ease-in;
+  opacity: 0;
+
+  &.spin-enter,
+  &.spin-exit.spin-exit-active {
+    opacity: 0;
+  }
+
+  &.spin-exit,
+  &.spin-enter.spin-enter-active {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
