@@ -1,5 +1,4 @@
 const config = {
-
   base: {
     srcPath: __dirname,
     apiURL: 'http://localhost:3000',
@@ -7,19 +6,18 @@ const config = {
   },
 
   development: {
-    becomeDevUser: false
+    becomeDevUser: false,
   },
 
-  test: {
-  },
+  test: {},
 
   production: {
-    apiURL: 'http://boxd-api.ivorreic.com',
-    appURL: 'http://boxd.ivorreic.com'
-  }
-}
+    apiURL: 'https://boxd-api.ivorreic.com',
+    appURL: 'https://boxd.ivorreic.com',
+  },
+};
 
 export default {
   ...config.base,
-  ...config[process.env.NODE_ENV]
-}
+  ...config[process.env.NODE_ENV],
+};
